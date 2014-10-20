@@ -1,0 +1,29 @@
+/*
+ * Programa que muestra una tabla con las potencias de x (x x2 x3 x4)
+ * para valores de x desde 1 hasta XMAX
+ */
+//definición de la clase Ejemplo1BuclesAnidados
+public class JavaApplication22 {
+//define el método main
+    public static void main(String[] args) {
+//final: en este contexto indica que una variable es de tipo constante
+//declara la variable XMAX de tipo integer con el valor 10.
+        final int XMAX = 10;
+//define las variables de tipo integer
+        int x, n;
+        //mostrar la cabecera de la tabla
+//pinta en la pantalla un texto
+        System.out.printf("%10s%10s%10s%10s%n", "x","x^2","x^3","x^4");
+//valor inicial de x 1, durante el valor de x sea menor o igual a la variable XMAX  incrementando 1.
+        for (x = 1; x <= XMAX; x++){   //filas
+//valor inicial de n 1, durante el valor de n sea menor o igual a 4  incrementando 1.
+             for (n = 1; n <= 4; n++){   //columnas
+//La clase Math de Java nos permite realizar un amplio conjunto de operaciones matemáticas entre las cuales encontramos una que nos permite realizar potencias.Esto lo realizaremos mediante el método .pow()
+//pinta en la pantalla un texto . escribe la potencia entre dos numeros.
+
+                  System.out.printf("%10.0f", Math.pow(x,n));
+             }
+             System.out.println();
+        }
+    }
+}

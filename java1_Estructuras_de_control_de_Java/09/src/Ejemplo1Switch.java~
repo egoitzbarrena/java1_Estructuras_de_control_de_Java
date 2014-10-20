@@ -1,0 +1,72 @@
+/*
+ * Programa que pide dos números y un operador y muestra el resultado
+ */
+//importa todas las clases  del paquete java.util
+import java.util.*;
+//importa todas las clases  del paquete java.io
+import java.io.*;
+//definición de la clase Ejemplo1Switch
+public class Ejemplo1Switch {
+    public static void main(String[] args) throws IOException{
+//define las variables de tipo integer.y declara la variable Resultado con el valor 0
+        int A,B, Resultado = 0 ;
+//define la variable de tipo char
+        char operador;
+//declara la variable calculado de tipo boolean con el valor true.
+        boolean calculado = true;
+//utiliza la clase scanner para recojer todo lo que el usuario meta por el teclado y lo guarda en la variable sc de tipo Scanner.
+        Scanner sc = new Scanner(System.in);
+//pinta en la pantalla un texto. en este te pide que introduzcos un numero entero .
+        System.out.print("Introduzca un numero entero:");
+//recoje lo que has introducido en la variable A.
+        A = sc.nextInt();
+//pinta en la pantalla un texto. en este caso te pide que introduzcas otro numero entero .
+        System.out.print("Introduzca otro numero entero:");
+//recoje lo que has introducido en la variable B.
+        B = sc.nextInt();
+//pinta en la pantalla un texto. en este caso te pide que introduzcas un operador .
+        System.out.print("Introduzca un operador (+,-,*,/):");
+//Para leer un carácter solamente tenemos que llamar a la función read desde System.in.
+//lee un caracter y lo guarda en la variable operador.
+        operador = (char)System.in.read();
+//con este metodo dependiendo del operador introducido mostrara una linea o otra.
+        switch (operador) {
+//si el operador es el de la resta, guardara en la variable resultado  el resultado de la resta entre el numero A y el numero B .
+                case '-' : Resultado = A - B; 
+//sirve para salir del switch
+                           break;
+//si el operador es el de suma, guardara en la variable resultado ,  el resultado de la suma entre el numero A y el numero B .
+                case '+' : Resultado = A + B;
+//sirve para salir del switch
+                           break;
+//si el operador es el de multiplicacion, guardara en la variable resultado ,  el resultado de la multiplicacion entre el numero A y el numero B .
+                case '*' : Resultado = A * B;
+//sirve para salir del switch
+                           break;
+//si el operador es el de la division. si el numero que esta en la variable B es diferente a 0 ,guardara en la variable resultado ,  el resultado de la division entre el numero A y el numero B .
+                case '/' : if(B!=0)
+                              Resultado = A / B;
+//si no se cumple la condicion anterio aparecera el siguiente mensaje y a la variable calculado le dara el valor false..
+                           else{
+//pinta en la pantalla un texto. en este caso te dice que no se puede dividir por cero.  
+                              System.out.println("\nNo se puede dividir por cero");
+//le da el valor false a la variable calculado.
+                              calculado = false;
+                           }
+//sirve para salir del switch
+                           break;
+//si no encuentra el valor de igualdad entre variable y constante ejecuta el default.
+//si el opedor no es el de ningun case aparecera la siguiente linea y a la variable calculado le pasara el valor false.
+//pinta en la pantalla un texto. en este caso te dice que el operador no es valido.
+                default : System.out.println("\nOperador no valido");
+//le da el valor false a la variable calculado.
+                          calculado = false;
+                         
+        }
+//si la variable calculado tiene el valor de true, aparecera la siguiente linea.
+        if(calculado){
+//pinta en la pantalla un texto. en este caso aparece una frase y el valor de la variable Resultado
+            System.out.println("\nEl resultado es: " + Resultado);
+        }
+    }
+}

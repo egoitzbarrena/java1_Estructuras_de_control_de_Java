@@ -1,0 +1,35 @@
+/*
+ * Programa que lee dos números de tipo double por teclado
+ * y muestra su suma, resta y multiplicación.
+ */
+//importa todas las clases  del paquete java.util
+import java.util.*;
+//definición de la clase Main
+public class Main {
+//define el método main
+    public static void main(String[] args){
+        //utiliza la clase scanner para recojer todo lo que el usuario meta por el teclado y lo guarda en la variable sc de tipo Scanner.
+	Scanner sc = new Scanner(System.in);
+//define las variables de tipo double
+        double numero1, numero2;
+//pinta en la pantalla un texto. en este caso te pide que introduzcas el primer numero .
+        System.out.println("Introduce el primer número:");
+//recoje lo que has introducido en la variable numero1.
+        numero1 = sc.nextDouble();
+//pinta en la pantalla un texto. en este caso te pide que introduzcas el primer numero .
+        System.out.println("Introduce el segundo número:");
+//recoje lo que has introducido en la variable numero1.
+        numero2 = sc.nextDouble();
+//pinta en la pantalla un texto. en este caso los numeros introducidos.
+        System.out.println("Números introducido: " + numero1 + "  " + numero2);
+//pinta en la pantalla un texto. en este caso los numeros introducidos y la suma entre los dos.
+        System.out.println
+          (numero1 + " + " + numero2 + " = " + (numero1+numero2));
+//pinta en la pantalla un texto. en este caso los numeros introducidos y el resultado la resta entre los dos.
+        System.out.println
+          (numero1 + " - " + numero2 + " = " + (numero1-numero2));
+//pinta en la pantalla un texto. en este caso los numeros introducidos y el resultado la multiplicacion entre los dos.
+        System.out.println
+          (numero1 + " * " + numero2 + " = " + numero1*numero2);
+    }
+}

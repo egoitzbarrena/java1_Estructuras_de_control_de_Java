@@ -1,0 +1,24 @@
+/* Programa que lea dos números por teclado y los muestre por pantalla.
+ */
+//importa todas las clases  del paquete java.util
+import java.util.*;
+
+//definición de la clase Main
+public class Main {
+//define el método main
+    public static void main(String[] args){
+        //define las variables de tipo int(integer)
+        int n1, n2;
+	//utiliza la clase scanner para recojer todo lo que el usuario meta por el teclado y lo guarda en la variable sc de tipo Scanner.
+        Scanner sc = new Scanner(System.in);
+        //pinta en la pantalla un texto. en este caso te pide que introduzcas un numero entero.
+        System.out.println("Introduce un número entero: ");
+        n1 = sc.nextInt();      //recoje lo que has introducido en la variable n1.
+        //pinta en la pantalla un texto. en este caso te pide que introduzcas un numero entero.
+        System.out.println("Introduce otro número entero: ");
+        n2 = sc.nextInt();      //recoje lo que has introducido en la variable n2.
+       
+        ////pinta en la pantalla un texto.en este caso el valor de los variable n1 y n2
+        System.out.println("Ha introducido los números: " + n1 + " y " + n2);
+    }
+}

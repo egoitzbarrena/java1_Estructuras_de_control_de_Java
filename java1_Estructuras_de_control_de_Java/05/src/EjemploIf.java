@@ -1,0 +1,26 @@
+/*
+ * programa que pide un número por teclado y calcula si es par o impar
+ */
+//importa todas las clases  del paquete java.util
+import java.util.*;
+//definición de la clase Ejemplo0If
+public class EjemploIf {
+//define el método main
+    public static void main(String[] args) {
+//utiliza la clase scanner para recojer todo lo que el usuario meta por el teclado y lo guarda en la variable sc de tipo Scanner.
+        Scanner sc = new Scanner(System.in);
+//define la variable de tipo integer.
+        int num; 
+//pinta en la pantalla un texto. en este caso te pide que introduzcas un numero.     
+        System.out.println("Introduzca numero: ");
+//recoje lo que has introducido en la variable num.
+        num = sc.nextInt();
+// si el numero que hemos introducido dividido entre 2 el resto nos da 0 aparece la siguiente linea si no aparece la otra(else).
+        if ((num%2)==0)
+//pinta en la pantalla un texto. en este caso la palabra par. 
+           System.out.println("PAR");
+        else
+//pinta en la pantalla un texto. en este caso la palabra impar. 
+            System.out.println("IMPAR");
+    }
+}

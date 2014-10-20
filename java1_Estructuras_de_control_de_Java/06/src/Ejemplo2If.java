@@ -1,0 +1,34 @@
+/*
+ * Programa que muestra un saludo distinto según la hora introducida
+ */
+//importa todas las clases  del paquete java.util
+import java.util.*;
+//definición de la clase Ejemplo2If
+public class Ejemplo2If {
+//define el método main
+    public static void main(String[] args) {
+//utiliza la clase scanner para recojer todo lo que el usuario meta por el teclado y lo guarda en la variable sc de tipo Scanner.
+      Scanner sc = new Scanner(System.in);
+//define la variable de tipo integer.
+      int hora;
+//pinta en la pantalla un texto. en este caso te pide que introduzcas la hora .
+      System.out.println("Introduzca una hora (un valor entero): ");
+//recoje lo que has introducido en la variable hora.
+      hora = sc.nextInt();
+// si la hora es mayor o igual a 0 y la hora es menor a 12 aparece la siguiente linea(Buenos dias).
+      if (hora >= 0 && hora < 12)
+//pinta en la pantalla un texto. en este caso la frase Buenos dias .
+          System.out.println("Buenos días");
+//si no se cumple la condicion anterior, si la hora es mayor o igual a 12 y la hora es menor a 21 aparece la siguiente linea(Buenas tardes).
+      else if (hora >= 12 && hora < 21)
+//pinta en la pantalla un texto. en este caso la frase Buenos tardes .
+           System.out.println("Buenas tardes");
+//si no se cumple la condicion anterior, si la hora es mayor o igual a 21 y la hora es menor a 24 aparece la siguiente linea(Buenas noches).
+      else if (hora >= 21 && hora < 24)
+//pinta en la pantalla un texto. en este caso la frase Buenos noches .
+            System.out.println("Buenas noches");
+      else
+//si no se cumplen ninguna de las tres condiciones anteriores aparece la siguiente linea(Hora no valida).
+            System.out.println("Hora no válida");
+    }
+}
